@@ -16,14 +16,11 @@
 *.lib
 
 # CMake->MSVC artifacts
-*.sln
-*.vcxproj
 ALL_BUILD
 ZERO_CHECK
 
 # MSVC secondary artifacts
 *.suo
-*.vcxproj.filters
 *.vcxproj.user
 *.pdb
 *.ilk
