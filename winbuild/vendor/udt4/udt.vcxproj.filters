@@ -1,48 +1,48 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\api.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\buffer.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\buffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\cache.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\cache.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\ccc.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\ccc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\channel.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\channel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\common.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\common.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\core.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\epoll.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\epoll.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\list.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\md5.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\md5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\packet.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\packet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\queue.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\window.cpp">
+    <ClCompile Include="..\..\..\vendor\udt4\src\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="E:\Github\fast-compile\vendor\udt4\CMakeLists.txt" />
+    <CustomBuild Include="..\..\..\vendor\udt4\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
