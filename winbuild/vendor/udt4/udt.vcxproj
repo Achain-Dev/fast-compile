@@ -50,7 +50,7 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">udt.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">udt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Github\fast-compile\build\vendor\udt4\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">..\..\..\build\vendor\udt4\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">udt.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">udt</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
@@ -158,68 +158,24 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="E:\Github\fast-compile\vendor\udt4\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Github/fast-compile/vendor/udt4/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HE:/Github/fast-compile -BE:/Github/fast-compile/build --check-stamp-file E:/Github/fast-compile/build/vendor/udt4/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/Github/fast-compile/vendor/udt4/CMakeLists.txt;E:\Github\fast-compile\vendor\udt4\CMakeLists.txt;E:\Github\fast-compile\vendor\udt4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Github\fast-compile\build\vendor\udt4\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Github/fast-compile/vendor/udt4/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HE:/Github/fast-compile -BE:/Github/fast-compile/build --check-stamp-file E:/Github/fast-compile/build/vendor/udt4/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/Github/fast-compile/vendor/udt4/CMakeLists.txt;E:\Github\fast-compile\vendor\udt4\CMakeLists.txt;E:\Github\fast-compile\vendor\udt4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Github\fast-compile\build\vendor\udt4\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Github/fast-compile/vendor/udt4/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HE:/Github/fast-compile -BE:/Github/fast-compile/build --check-stamp-file E:/Github/fast-compile/build/vendor/udt4/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/Github/fast-compile/vendor/udt4/CMakeLists.txt;E:\Github\fast-compile\vendor\udt4\CMakeLists.txt;E:\Github\fast-compile\vendor\udt4\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Github\fast-compile\build\vendor\udt4\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-    </CustomBuild>
+
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\api.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\buffer.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\cache.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\ccc.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\channel.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\common.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\core.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\epoll.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\list.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\md5.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\packet.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\queue.cpp" />
-    <ClCompile Include="E:\Github\fast-compile\vendor\udt4\src\window.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\api.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\buffer.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\cache.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\ccc.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\channel.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\common.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\core.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\epoll.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\list.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\md5.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\packet.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\queue.cpp" />
+    <ClCompile Include="..\..\..\vendor\udt4\src\window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="E:\Github\fast-compile\build\ZERO_CHECK.vcxproj">
-      <Project>{F68AC795-5873-3C63-AA2F-ABCB36F7898F}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
