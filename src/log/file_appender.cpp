@@ -20,8 +20,9 @@ namespace fc {
          boost::mutex               slock;
 
       private:
-         future<void>               _rotation_task;
-         time_point_sec             _current_file_start_time;
+          future<void>               _rotation_task;
+          future<void>               _rotation_schedule_task;
+          time_point_sec             _current_file_start_time;
 
          time_point_sec get_file_start_time( const time_point_sec& timestamp, const microseconds& interval )
          {
@@ -42,6 +43,7 @@ namespace fc {
 
 
                  _rotation_task = async( [this]() { rotate_files( true ); }, "rotate_files(1)" );
+                 _rotation_task.wait();
              }
          }
 
@@ -72,7 +74,7 @@ namespace fc {
                {
                    if( start_time <= _current_file_start_time )
                    {
-                       _rotation_task = schedule( [this]() { rotate_files(); },
+                       _rotation_schedule_task = schedule( [this]() { rotate_files(); },
                                                   _current_file_start_time + cfg.rotation_interval.to_seconds(),
                                                   "rotate_files(2)" );
                        return;
@@ -81,6 +83,12 @@ namespace fc {
                    out.flush();
                    out.close();
                }
+
+               if (!fc::exists(log_filename.parent_path()))
+               {
+                   fc::create_directories(log_filename.parent_path());
+               }
+ 
                remove_all(link_filename);  // on windows, you can't delete the link while the underlying file is opened for writing
                if( fc::exists( log_filename ) )
                   out.open( log_filename, std::ios_base::out | std::ios_base::app );
@@ -124,7 +132,7 @@ namespace fc {
              }
 
              _current_file_start_time = start_time;
-             _rotation_task = schedule( [this]() { rotate_files(); },
+             _rotation_schedule_task = schedule([this]() { rotate_files(); },
                                         _current_file_start_time + cfg.rotation_interval.to_seconds(),
                                         "rotate_files(3)" );
          }

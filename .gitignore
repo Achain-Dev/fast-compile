@@ -16,14 +16,11 @@
 *.lib
 
 # CMake->MSVC artifacts
-*.sln
-*.vcxproj
 ALL_BUILD
 ZERO_CHECK
 
 # MSVC secondary artifacts
 *.suo
-*.vcxproj.filters
 *.vcxproj.user
 *.pdb
 *.ilk
@@ -45,7 +42,6 @@ libfc_debug.a
 *.sw*
 
 fc_automoc.cpp
-git_revision.cpp
 GitSHA3.cpp
 
 ntp_test
