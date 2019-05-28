@@ -31,12 +31,6 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(platformBitness 64)
 endif()
 
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
-   set(CMAKE_BUILD_TYPE "Release")
-else()
-   set(CMAKE_BUILD_TYPE "Debug")
-endif()
-
 message(STATUS "Build value for CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 
 SET (ORIGINAL_LIB_SUFFIXES ${CMAKE_FIND_LIBRARY_SUFFIXES})
